@@ -1,0 +1,29 @@
+
+
+
+.bodyColor-1{
+    background-color: bisque;
+}
+.bodyColor-2{
+    background-color: blueviolet;
+}
+.bodyColor-3{
+    background-color:yellowgreen;
+}
+.bodyColor-4{
+    background-color:violet
+}
+.bodyColor-5{
+    background-color:thistle;
+}
+.bodyColor-6{
+    background-color:tomato;
+}
+
+.randomText{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    height: 100vh;
+}

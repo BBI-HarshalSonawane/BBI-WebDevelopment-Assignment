@@ -1,0 +1,13 @@
+
+
+
+To prevent from CROSS SIDE SCRIPTING we need to use an following functions 👇
+
+    1) rawurlencode()       <--- inside that funct we need to pass an variable or anything that we need to validate
+    2) http_build_query()   <--- inside that funct we need to pass an variable or anything that we need to validate
+
+    ✅ http_build_query() <--- about this funct learn actual in project video no. 83  👉 time stamp 4:13 
+
+
+
+

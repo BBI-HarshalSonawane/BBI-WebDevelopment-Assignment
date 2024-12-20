@@ -1,0 +1,14 @@
+
+
+
+
+https://www.php.net/manual/en/control-structures.alternative-syntax.php#control-structures.alternative-syntax
+
+https://php.net/manual/en/function.in-array.php     // Imp it contains all array function
+
+https://www.codecademy.com/resources/docs/php/arrays
+
+
+https://www.php.net/manual/en/function.max.php   // all math funct
+
+

@@ -1,0 +1,5 @@
+Here we will cerate one kind of login credential application
+
+1) means here we do login kind of thing, adding some things to cart --> via setSession
+2) and getting product from cart --> via getSession
+3) and get logout ❌ means destroy session. 

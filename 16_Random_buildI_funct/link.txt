@@ -1,0 +1,26 @@
+
+
+https://php.net/manual/en/function.mt-rand.php
+
+
+// following function we get at above link
+
+    getrandmax
+
+    mt_​getrandmax
+
+    mt_​rand
+
+    mt_​srand
+
+    rand
+
+    random_​bytes
+
+    random_​int
+
+    srand
+
+    lcg_​value
+
+
