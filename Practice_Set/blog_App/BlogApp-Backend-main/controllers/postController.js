@@ -14,10 +14,20 @@ exports.createPost = async (req, res) => {
             title,
             body,
         });
-
+        res.redirect("/admin");
+        
         res.json({
-            post: post, // Return the created post
-        });
+            msg:"Task added successfully!"
+        })
+        
+
+
+
+       
+        
+        // console.log("me post ",post);
+
+    
     } catch (error) {
         return res.status(400).json({
             error: "Error while creating post",
@@ -25,20 +35,11 @@ exports.createPost = async (req, res) => {
     }
 };
 
+
 exports.getAllPosts = async (req, res) => {
     try {
-        // Fetch all posts, including associated likes and comments
-        const posts = await Post.findAll({
-            include: [
-                {
-                    model: Like, // Include associated likes
-                },
-                {
-                    model: Comment, // Include associated comments
-                },
-            ],
-        });
-
+        const posts = await Post.findAll();
+        console.log(posts);
         res.json({
             posts: posts,
         });
@@ -48,3 +49,28 @@ exports.getAllPosts = async (req, res) => {
         });
     }
 };
+
+
+// exports.getAllPosts = async (req, res) => {
+//     try {
+//         // Fetch all posts, including associated likes and comments
+//         const posts = await Post.findAll({
+//             include: [
+//                 {
+//                     model: Like, // Include associated likes
+//                 },
+//                 {
+//                     model: Comment, // Include associated comments
+//                 },
+//             ],
+//         });
+
+//         res.json({
+//             posts: posts,
+//         });
+//     } catch (error) {
+//         res.status(400).json({
+//             error: "Error while fetching data",
+//         });
+//     }
+// };

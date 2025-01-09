@@ -19,4 +19,15 @@ const connectWithDb = async () => {
     }
 };
 
-module.exports = { sequelize, connectWithDb };
+
+const syncDatabase = async () => {
+    try {
+        await sequelize.sync({ force: true }); // force: true will drop and recreate tables
+        console.log("All tables synced successfully.");
+    } catch (error) {
+        console.error("Error syncing database:", error.message);
+    }
+};
+
+
+module.exports = { sequelize, connectWithDb , syncDatabase};

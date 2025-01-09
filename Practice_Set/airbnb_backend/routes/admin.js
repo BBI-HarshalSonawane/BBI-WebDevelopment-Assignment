@@ -19,25 +19,6 @@ myRouter.get('/add-product', (req, res, next) => {    // here app.get() ❌ not 
 //------------------------------------------------------------------------
 
 
-
-
-// myRouter.post('/product', (req, res, next) => {
-//   const {firstname ,lastname,country,subject,houseImage} = req.body;
-//   console.log(req.body);          // ✅ req.body is working because we use "express.urlencoded({ extended: true })" in app.js
-  
-//   myCardStore.push({ firstname : firstname,
-//     lastname : lastname,
-//     country : country,
-//     subject : subject,
-//     houseImage : houseImage,
-//    });
-   
-//   res.redirect('/home');   // ✅
-
-// });
-
-
-
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
     cb(null, 'uploads/'); // Directory to save images
@@ -49,11 +30,6 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage });
 
 //----------------------
-
-// Serve the form
-myRouter.get('/add-product', (req, res, next) => {
-  res.sendFile(path.join(rootDir, 'views', 'form.html'));
-});
 
 // Handle the form submission (POST request)
 myRouter.post('/product', upload.single('houseImage'), (req, res, next) => {
@@ -79,12 +55,6 @@ myRouter.post('/product', upload.single('houseImage'), (req, res, next) => {
   // Redirect or send a response after successful submission
   res.redirect('/home'); // Adjust the redirect path as needed
 });
-
-
-
-
-
-
 
 
 // -----------------------------------------

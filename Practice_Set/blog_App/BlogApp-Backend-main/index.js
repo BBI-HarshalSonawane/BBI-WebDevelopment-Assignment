@@ -1,6 +1,6 @@
 const express = require("express");
 require("dotenv").config();
-const { sequelize, connectWithDb } = require("./config/database"); // Import Sequelize connection
+const { sequelize, connectWithDb, syncDatabase} = require("./config/database"); // Import Sequelize connection
 
 const path = require('path');
 const app = express();
@@ -20,7 +20,6 @@ app.set('views', path.join(rootDir, 'views'));
 
 // 👇👇👇👇 this middleware is for css files linking statically
 
-// app.use(express.static(path.join(__dirname, 'views')));    // ✅✅ not req becz of css file we place in "public" folder
 app.use(express.static(path.join(rootDir, 'public')));     // ✅✅ to render static folder for "css" 👉👉 "rootDir" use instead of __dirname absolute path we place in "utils" folder
 
 //--------------------------------------------
@@ -33,11 +32,15 @@ const PORT = process.env.PORT || 3000;
 
 // Importing the routes
 const blogRoutes = require("./routes/blog");
-const homeRoutes = require('./routes/home');
+const adminRoutes = require('./routes/admin');
+const editorRoutes = require('./routes/editor');
+const viewerRoutes = require('./routes/viewer');
 
 // Default route
 app.use("/api/v1", blogRoutes);     //that's why we need to use (app.use("/api/v1") 👉👉 http://localhost:4000/api/v1/dummyroute
-app.use("/home",homeRoutes);
+app.use("/admin",adminRoutes);
+app.use("/editor",editorRoutes);
+// app.use("/view",viewerRoutes);
 
 //--------------------------------------------------------------------
 
@@ -52,7 +55,8 @@ const startServer = async () => {
     try {
         // Connect to the database
         await connectWithDb();
-
+        await syncDatabase();
+        
         // Sync all models
         // await sequelize.sync({ alter: true }); // Use `alter: true` for development to update the schema automatically
         console.log("All models were synchronized successfully.");

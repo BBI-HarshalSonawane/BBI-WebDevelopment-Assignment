@@ -9,13 +9,10 @@ const rootDir = require("../utils/pathUtils"); // ✅
 
 myRouter.get('/', (req, res, next) => {
 
-
-  // res.sendFile(path.join(rootDir, '../views/cards.html')); // ✅ like this 
   res.sendFile(path.join(rootDir,'views' ,'home.html')); // ✅ like this 
 });
 
 myRouter.use((req, res, next) => {
-  // res.status(404).sendFile(path.join(rootDir, '../views/404_page.html')); // Serve 404 page
   res.status(404).sendFile(path.join(rootDir, 'views' ,'404_page.html')); // Serve 404 page
 });
 
