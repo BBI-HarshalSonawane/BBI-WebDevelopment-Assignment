@@ -1,0 +1,17 @@
+
+
+to install and save express
+
+npm install express --save
+
+/------------------------------------------------------------/
+
+        👉👉👉👉👉👉👉 Point to remember 👈👈👈👈👈👈👈
+    1) Order matters
+    2) Can not ❌ call next() 👈 after send() 👈
+    3) "/" match everything means after "/" slash if we input anything wrong still it will referring to "/" route
+    4) Calling "res.send()" implicitly call "res.end()" in core node that we done earlier
+ 
+
+
+

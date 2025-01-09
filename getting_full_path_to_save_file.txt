@@ -1,0 +1,15 @@
+
+
+here is 👇👇👇👇 below we have function save() 👈 in which we define path to 
+save our file in 👉 "json" format in  👉👉 "data" folder
+
+
+
+save() { 
+    const p = path.join(    ✅ here is main work start
+        path.dirname(process.mainModule.filename),
+        'data", 
+        'products.json'
+    );
+    fs.readFile();
+}

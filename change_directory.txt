@@ -1,0 +1,21 @@
+
+
+Normally 👉👉👉👉  ../ use to change directory from current directory 
+
+EX. Means we are currently in 👉👉 bbi-m1038@BBI-M1038 Practice_Set
+
+in "Practice_Set" directory and from that directory we need to go to 👉👉 17_Error_handling 👈👈 folder
+
+then we do as 👉👉 bbi-m1038@BBI-M1038 Practice_Set % cd ../17_Error_handling  
+
+i.e --> Practice_Set % cd ../17_Error_handling 
+-------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+

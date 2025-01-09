@@ -1,0 +1,12 @@
+
+
+https://www.youtube.com/watch?v=GNTDLqKWknw&list=PL78RhpUUKSwfeSOOwfE9x6l5jTjn5LbY3&index=12&ab_channel=CompleteCodingbyPrashantSir
+
+
+time stamp  ---> 19.59
+
+--------------------------------------------
+
+And also update package.json 👈👈  👇👇👇
+
+"start" : "nodemon app.js & npm run tailwind"

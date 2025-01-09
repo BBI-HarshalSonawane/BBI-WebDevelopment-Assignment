@@ -1,0 +1,51 @@
+
+let suppose we define module "requestHandler" 👇👇👇
+and lets suppose we put this data in "admin.js" file 👈👈
+
+const requestHandler = (req, res) => { }
+
+//------------------------------------------------
+module.exports = requestHandler;   // 1️⃣ way ✅      most preferred
+//------------------------------------------------
+
+
+//------------------------------------------------
+module.exports = {   // 2️⃣ way ✅
+    handler: requestHandler,
+    someText: 'Some hard coded text'
+};
+//------------------------------------------------
+
+
+//------------------------------------------------
+/module.exports.handler = requestHandler; // 3️⃣ way ✅
+module.exports.someText = 'Some text';
+//------------------------------------------------
+
+
+//------------------------------------------------
+exports.handler = requestHandler; // 4️⃣ way ✅
+exports.someText = 'Some hard coded text';
+//------------------------------------------------
+
+
+👇👇👇👇👇👇 Way to import this above into another files 👇👇👇👇👇👇
+
+for 1️⃣ way ✅ 
+const adminData = require('./admin');
+console.log('me data', adminData.handler);
+//------
+
+for 2️⃣ way ✅ 
+const adminData = require('./admin');
+console.log('me data', adminData.handler);
+//------
+
+for 3️⃣ way ✅ 
+const adminData = require('./admin');
+console.log('me data', adminData.handler);
+//------
+
+for 4️⃣ way ✅
+const adminData = require('./admin');
+console.log('me data', adminData.handler);

@@ -1,0 +1,14 @@
+
+
+Here we need to try to
+
+1) We create an 2 separate middleware
+2) After that we need to create 3rd middleware with "res.send()"
+3) After that we need to create an "get" route for "/" default middleware
+4) then this "/" middleware need to redirect to "/contact_us" path 
+5) In that "/contact_us" path page with "GET" route,  we have an form in which user can give there "name" and "email"
+6) on that same "/contact_us" path "POST" route, we need to receive that data and show it on same page
+
+
+
+

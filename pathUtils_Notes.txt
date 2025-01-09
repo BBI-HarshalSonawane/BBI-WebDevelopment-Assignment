@@ -1,0 +1,48 @@
+
+
+All file paths and directory references are managed in one place.
+
+If a path changes, you only need to update it in the pathUtils file rather than
+hunting for all occurrences in the codebase.
+
+define in 👉👉 "util/utilPath.js" file like this below 👇👇👇👇
+
+const path = require('path');
+
+module.exports = path.dirname(process.mainModule.filename);  ✅
+
+// This will give us the path of the main module file i.e app.js file.
+
+
+//-----------------------------------------------------------------
+
+// And we need to import it to our 👉👉 app.js files like 👇👇👇👇
+
+const rootDir = require("./utils/pathUtils"); ✅
+
+//-----------------------------------------------------------------
+
+
+We remove all 👉👉 __dirname 👈👈 and replace with 👉👉 "rootDir" 👈👈
+
+app.use(express.static(path.join(__dirname, 'views'))); 
+like 👇👇👇👇
+app.use(express.static(path.join(rootDir, 'views'))); ✅
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

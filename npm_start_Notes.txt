@@ -1,0 +1,19 @@
+to use 
+    👉👉👉👉👉 npm start 👈👈👈👈👈
+to run any file we need to put an ✅ package.json ✅ in our every folder.
+
+
+
+to start server with nodemon we add 👉 script 👈 below "main" ✅ tag
+
+"scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+},
+
+
+
+
+
+
+

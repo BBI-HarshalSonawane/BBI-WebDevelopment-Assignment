@@ -1,0 +1,20 @@
+
+// this 3 lines are very IMP because when we accept data from "form" that we create below 👇👇 we will 
+// we need to to show it on page, then we will access it by 👉👉 "req.body" 👈👈 for that we need this 3 line
+// ❌ without it, the code will not work properly.
+👇👇👇👇👇👇👇👇👇👇
+
+const bodyParser = require('body-parser');  // ✅
+app.use(bodyParser.json()); // ✅
+app.use(bodyParser.urlencoded({ extended: true })); // ✅
+
+//  👆👆👆👆👆👆👆👆👆 ❌ deprecated now we don't use "bodyParser" like this
+
+--------------------------------------------------------------------------------------------
+
+with express we use like 👇👇👇👇👇👇👇👇👇👇 ✅
+
+const app = express();      // 👈
+app.use(express.urlencoded({ extended: true }))  // 👈
+
+
