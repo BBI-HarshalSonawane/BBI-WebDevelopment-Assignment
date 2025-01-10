@@ -43,8 +43,8 @@ Used to execute JavaScript code without directly outputting anything to the temp
 
 Example:    🤯🤯🤯
 
-<% for (let i = 0; i < items.length; i++) { %>
-  <p><%= items[i] %></p>
+<% for (let i = 0; i < items.length; i++) { %>  // ✅ for forEach or for loop we use it becz for loop we dont want to see on webpage
+  <p><%= items[i] %></p>  // ✅ and this use <%= %> becz we want to saw "items" on webpage
 <% } %>
 
 ⭕ Input in the route:

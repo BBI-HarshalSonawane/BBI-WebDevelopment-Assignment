@@ -34,13 +34,16 @@ const PORT = process.env.PORT || 3000;
 const blogRoutes = require("./routes/blog");
 const adminRoutes = require('./routes/admin');
 const editorRoutes = require('./routes/editor');
-const viewerRoutes = require('./routes/viewer');
+// const viewerRoutes = require('./routes/viewer');
+
 
 // Default route
 app.use("/api/v1", blogRoutes);     //that's why we need to use (app.use("/api/v1") 👉👉 http://localhost:4000/api/v1/dummyroute
 app.use("/admin",adminRoutes);
 app.use("/editor",editorRoutes);
 // app.use("/view",viewerRoutes);
+
+
 
 //--------------------------------------------------------------------
 

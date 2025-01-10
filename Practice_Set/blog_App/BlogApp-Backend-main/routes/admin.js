@@ -9,7 +9,8 @@ const rootDir = require("../utils/pathUtils"); // ✅
 
 myRouter.get('/', (req, res, next) => {
 
-  res.sendFile(path.join(rootDir,'views' ,'home.html')); // ✅ like this 
+  // res.render('home'); // ✅ Here is "home.ejs" we render for ejs
+  res.sendFile(path.join(rootDir, "views", "landingPage.html"));
 });
 
 myRouter.use((req, res, next) => {

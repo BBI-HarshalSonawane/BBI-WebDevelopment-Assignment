@@ -16,20 +16,9 @@ exports.createPost = async (req, res) => {
         });
         res.redirect("/admin");
         
-        res.json({
-            msg:"Task added successfully!"
-        })
-        
-
-
-
-       
-        
-        // console.log("me post ",post);
-
-    
     } catch (error) {
-        return res.status(400).json({
+        res.status(400).json({
+            success: false,
             error: "Error while creating post",
         });
     }
