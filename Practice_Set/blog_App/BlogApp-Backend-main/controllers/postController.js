@@ -14,7 +14,7 @@ exports.createPost = async (req, res) => {
             title,
             body,
         });
-        res.redirect("/admin");
+        res.redirect("/admin/home");
         
     } catch (error) {
         res.status(400).json({

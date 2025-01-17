@@ -5,7 +5,8 @@ const router = express.Router();
 const {createComment} = require("../controllers/CommentController");
 const {createPost, getAllPosts} = require("../controllers/postController");
 const {likePost, unlikePost, dummyLink} = require("../controllers/likeController");
-const { signupUser, signinUser } = require("../controllers/userController.js");
+const { signupUser, signinUser } = require("../controllers/userController");
+const forgotPasswordController = require("../controllers/forgotPwdController");
 
 //create mapping between routes and controllers
 router.get("/dummyroute", dummyLink);
@@ -17,5 +18,9 @@ router.post("/likes/unlike", unlikePost);
 
 router.post("/signup", signupUser);
 router.post("/signin", signinUser);
+
+router.post("/forgot-password/send-otp", forgotPasswordController.sendOtp);
+router.post("/forgot-password/verify-otp", forgotPasswordController.verifyOtp);
+router.post("/forgot-password/reset-password", forgotPasswordController.resetPassword);
 
 module.exports = router; 

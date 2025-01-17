@@ -30,6 +30,14 @@ const User = sequelize.define("User", {
             isIn: [['user', 'editor', 'admin']], // Ensure valid role is assigned
         },
     },
+    resetOtp: {
+        type: DataTypes.INTEGER,
+        allowNull: true,
+    },
+    resetOtpExpires: {
+        type: DataTypes.DATE,
+        allowNull: true,
+    },
 });
 
 module.exports = User;
