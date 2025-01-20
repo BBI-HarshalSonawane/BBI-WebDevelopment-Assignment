@@ -1,0 +1,37 @@
+
+
+✅ "Errors thrown" in Node.js applications can be handled in the following ways: 👇👇👇👇
+
+1) Using try-catch block
+2) Using callbacks
+3) Using promises and promise callbacks
+4) Using async-await
+
+✅ Types of errors in JavaScript.
+
+1) Runtime Error 👈:   means operational errors occur when application in "production" 
+    Ex.                 Failed to connect to the server
+                        Request time out
+                        Invalid user input
+                        The System is out of memory
+                        Failed to resolve hostname
+                        The server returned a 500 response
+
+
+2) Syntax Error 👈: means programmer error, When a syntax error occurs, it does not affect all the code.
+    Ex.                 open or close your parentheses or square brackets.
+
+3) Try Catch Syntax 👈: Try-catch declaration to handle "runtime errors" 👈 in node.js,
+
+4) Error Object 👈: Whenever there is a "runtime error" 👈 "Object" of type "Error"❌ and sends it as an argument to catch.
+    Error object is composed of two properties. 
+    i) name
+    ii)message
+
+1️⃣ name: The name type of error, name "Error" , syntax error JSON would throw an exception of type "SyntaxError".
+2️⃣ message: The is composed of a text message containing more details of the error.
+
+5) SyntaxError 👈:  when interpreting the code syntaxError is thrown.
+
+
+https://publication.masteringbackend.com/error-handling-in-node-js-ef5cbfa59992

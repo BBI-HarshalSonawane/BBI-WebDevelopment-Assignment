@@ -1,0 +1,44 @@
+
+✅✅✅✅✅✅ for routing purpose means for redirecting we do as below. ✅✅✅✅✅✅✅
+
+1) Here we compare the "node" and "Express"
+
+earlier we use like   👇👇👇👇👇👇
+
+✅ const server = http.createServer((req, res) => {
+
+        const url = req.url;            // using req, and res
+
+        if (url === '/') {}
+
+        if (url === '/message' && method === 'POST') {}
+
+    })
+
+Means here in simple way like by "url" we do so....
+
+---------------------------------------------------------------------------
+
+After that we upgrade like   👇👇👇👇👇👇
+
+const express = require('express');
+const app = express();
+
+✅ app.get('/', (req, res, next) => { }             // using app 
+
+✅ app.get('/contact_us', (req, res, next) => { }
+
+---------------------------------------------------------------------------
+
+After that we upgrade like   👇👇👇👇👇👇
+
+const express = require('express');
+const router = express.Router();
+
+router.get('/add-product', (req, res, next) => { }      // using router 
+
+router.post('/product', (req, res, next) => { }
+
+
+
+

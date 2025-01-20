@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/form.css">
+</head>
+<body>
+
+    <header>
+        <h1>Create Post</h1>
+    </header>
+
+        <form action="/api/v1/posts/create" method="POST">
+        <!-- <form id="postForm" method="POST"> -->
+            <div class="container">
+                <div class="modal">
+                    <div class="modal__header">
+                        <span class="modal__title">New post</span>
+                    </div>
+                    <div class="modal__body">
+                        <div class="input">
+                            <label class="input__label">Post title</label>
+                            <input class="input__field" type="text" name="title"> 
+                            <p class="input__description">The title must contain a maximum of 32 characters</p>
+                        </div>
+                        
+                        <div class="input">
+                            <label class="input__label">Description</label>
+                            <textarea class="input__field input__field--textarea" name="body"></textarea>
+                            <p class="input__description">Give your post a good description so everyone knows what it's for</p>
+                        </div>
+                    </div>
+                    <div class="modal__footer">
+                        <button type="submit" class="button button--primary">Create post</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+        
+        
+</body>
+</html>

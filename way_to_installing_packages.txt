@@ -1,0 +1,15 @@
+
+npm install <package-name>
+
+1) 👉 -save: 👈 Adds the package to the project's dependencies in package.json. 
+
+2) 👉 -save-dev: 👈 Adds the package to the project's devDependencies (used only in development) in package.json.
+
+3) 👉 -g: 👈 Installs the package globally, making it available system- wide, not just in a specific project. 
+
+4) 👉 -save-exact: 👈 Installs the exact version specified without updating for newer versions. 
+
+5) 👉 -force: 👈 Forces npm to fetch and install packages even if the are already installed.
+
+
+Ex. ---> npm install nodemon --save-dev

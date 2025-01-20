@@ -1,0 +1,7 @@
+
+
+fs.writeFileSync('message.txt', message); ✅    writeFileSync
+// here we use "writeFileSync" is blocking code instead of "writeFile" because we want to write the file synchronously means we want to write the file first means execute this write file code and then move to the next line of code only because of synchronous nature of the code.
+
+fs.writeFile('message.txt', message);  ✅ writeFile
+// writeFile means non-blocking code our code will not wait for this to complete

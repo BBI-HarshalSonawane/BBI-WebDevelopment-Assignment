@@ -1,0 +1,11 @@
+
+ Here is our project statement is like 
+1) We need to create an "Calculator" for user.
+2) which will do calculation by handling "result" with "routes"
+
+3) Means when user on "home page" 👈👈 he only get "welcome" message. And 👉👉 get redirecting link for "number input" form page
+4) Means when user on "calculation page" 👈👈 he will get an form where he can put 2 numbers and press ✅ "submit" button
+
+5) And once submit he will redirect to the "result" 👈👈 page where he will get his result
+
+

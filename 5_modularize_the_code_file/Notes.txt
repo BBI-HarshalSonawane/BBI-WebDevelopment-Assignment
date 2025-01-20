@@ -1,0 +1,12 @@
+In this folder we show
+how many ways we can export our "function" and "method"
+
+see the handler.js file.
+
+by using module.export 👈👈👈👈 Specially we export everything 
+
+👇👇👇👇
+
+here we will modularize our code means separate our code into specific files.
+
+

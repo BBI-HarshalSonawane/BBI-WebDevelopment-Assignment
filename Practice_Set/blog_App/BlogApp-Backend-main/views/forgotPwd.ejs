@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/forgotPwd.css">
+
+</head>
+<body>
+    
+    <div class="forgot-password-wrap">
+        <div class="forgot-password-html">
+          <h2>Forgot Password</h2>
+          <!-- Step 1: Email Input -->
+          <div class="forgot-step" id="step-email">
+            <label for="forgot-email" class="label">Enter Your Registered Email</label>
+            <input id="forgot-email" type="email" class="input">
+            <button id="submit-email" class="button">Submit Email</button>
+          </div>
+      
+          <!-- Step 2: OTP Input (Hidden Initially) -->
+          <div class="forgot-step hidden" id="step-otp">
+            <label for="forgot-otp" class="label">Enter the OTP Sent to Your Email</label>
+            <input id="forgot-otp" type="text" class="input" maxlength="6">
+            <button id="submit-otp" class="button">Verify OTP</button>
+          </div>
+      
+          <!-- Step 3: Reset Password (Hidden Initially) -->
+          <div class="forgot-step hidden" id="step-reset">
+            <label for="reset-password" class="label">New Password</label>
+            <input id="reset-password" type="password" class="input">
+            <label for="confirm-password" class="label">Confirm Password</label>
+            <input id="confirm-password" type="password" class="input">
+            <button id="reset-password-btn" class="button">Reset Password</button>
+          </div>
+        </div>
+    </div>
+      
+    <script src="/js/forgotPwd.js"></script>
+
+</body>
+</html>

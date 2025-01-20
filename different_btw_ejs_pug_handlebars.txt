@@ -1,0 +1,111 @@
+
+
+✅  EJS (Embedded JavaScript):
+
+npm install --save ejs
+👆👆
+
+Allows direct embedding of JavaScript code within templates.
+Closest to raw HTML, with added <%= %> and <% %> for dynamic content.
+Example: ejs
+
+<html>
+  <head>
+    <title><%= title %></title>  // 👉 <%= %> 👈 to show output constant like title which is fixed
+  </head>
+  <body>
+    <h1><% header %></h1> // 👉 <% %> 👈 for "js" code 
+    <p><%= message %></p>
+  </body>
+</html>
+
+🤜🤜🤜🤜 Way to use EJS 👇👇👇👇
+
+const express = require('express');
+bodyParser = require('body-parser');
+const app = express();
+
+// Set EJS as the view engine
+
+app.set('view engine', 'ejs');      👈👈    IMP
+app.set('views', './views');        👈👈   it is nothing but name of our "view" folder 
+
+// Route
+app.get('/', (req, res) => {
+  res.render('index', { title: 'EJS Example', message: 'Hello from EJS!' });
+});
+
+--------------------------------------------------------------------------
+
+
+✅  Pug:
+
+npm install pug
+👆👆
+
+Formerly known as Jade.
+Uses a whitespace-sensitive, indent-based syntax.
+Minimalistic and concise; avoids HTML-like tags.
+Example: pug
+
+html
+  head
+    title Pug Example
+  body
+    h1 Welcome
+    p This is a Pug template.
+
+🤜🤜🤜🤜 Way to use pug 👇👇👇👇
+
+const express = require('express');
+const app = express();
+
+// Set Pug as the view engine
+
+app.set('view engine', 'pug');      👈👈    IMP
+app.set('views', './views');        👈👈
+
+// Route
+app.get('/', (req, res) => {
+  res.render('index', { title: 'Pug Example', message: 'Hello from Pug!' });
+});
+
+--------------------------------------------------------------------------
+
+✅  Handlebars:
+
+npm install express-handlebars
+👆👆
+
+Follows a more traditional, HTML-like syntax with embedded placeholders.
+Emphasizes logic-less templates.
+Example: handlebars
+
+<html>
+  <head>
+    <title>{{title}}</title>
+  </head>
+  <body>
+    <h1>{{header}}</h1>
+    <p>{{message}}</p>
+  </body>
+</html>
+
+🤜🤜🤜🤜 Way to use Handlebars 👇👇👇👇
+
+const express = require('express');
+const exphbs = require('express-handlebars');
+const app = express();
+
+// Set Handlebars as the view engine
+
+app.engine('handlebars', exphbs.engine());      👈👈    IMP
+app.set('view engine', 'handlebars');           👈👈
+app.set('views', './views');                    👈👈
+
+// Route
+app.get('/', (req, res) => {
+  res.render('home', { title: 'Handlebars Example', message: 'Hello from Handlebars!' });
+});
+--------------------------------------------------------------------------
+

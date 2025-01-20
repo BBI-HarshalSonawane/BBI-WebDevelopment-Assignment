@@ -1,0 +1,33 @@
+const { Sequelize } = require("sequelize");
+require("dotenv").config();
+
+// Initialize Sequelize with SQLite
+const sequelize = new Sequelize({
+    dialect: "sqlite",
+    storage: "./database.sqlite", // SQLite database file location
+    logging: false, // Disable logging for cleaner output
+});
+
+// Function to connect to the database
+const connectWithDb = async () => {
+    try {
+        await sequelize.authenticate();
+        console.log("Database connected successfully.");
+    } catch (error) {
+        console.error("Database connection failed:", error.message);
+        process.exit(1); // Exit the process if database connection fails
+    }
+};
+
+
+const syncDatabase = async () => {
+    try {
+        await sequelize.sync({ force: true }); // force: true will drop and recreate tables
+        console.log("All tables synced successfully.");
+    } catch (error) {
+        console.error("Error syncing database:", error.message);
+    }
+};
+
+
+module.exports = { sequelize, connectWithDb , syncDatabase};

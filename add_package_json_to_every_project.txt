@@ -1,0 +1,5 @@
+Once we will add package.json to every file we will able to 
+
+run whole project just by running command
+
+npm start 👈👈👈👈 in terminal

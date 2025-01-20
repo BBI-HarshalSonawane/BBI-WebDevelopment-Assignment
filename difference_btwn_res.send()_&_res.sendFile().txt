@@ -1,0 +1,34 @@
+
+
+1) res.send():   ✅
+
+res.send() is a versatile method that can handle various response types such as 
+👉 plain text, JSON data, and even HTML content. 
+It automatically sets the appropriate content type based on the data sent, 
+making it an indispensable workhorse for handling diverse responses.
+
+Example Usage of res.send():
+
+// Sending plain text
+res.send('Hello, World!');  👈👈👈
+
+// Sending JSON data        👈👈👈
+res.send({ message: 'Success', data: { name: 'John', age: 30 } });
+
+
+
+2) res.sendFile():     ✅
+
+When it comes to serving specific files to clients, 
+👉 res.sendFile() takes the spotlight. It's perfect for sending 
+👉 HTML documents, images, CSS, and other static resources. 
+The 👀 "method reads the specified file" 👀 and 😜 sends its contents as the response 😜, 
+making it a reliable choice for file-serving needs.
+
+Example Usage of res.sendFile():
+
+// Sending an HTML file     👈👈👈
+res.sendFile('index.html', { root: __dirname });
+
+// Sending an image         👈👈👈
+res.sendFile('image.jpg', { root: __dirname + '/public' });

@@ -1,0 +1,12 @@
+
+
+res.redirect('/'); <--- 👈👈👈👈    we use for redirecting
+
+------------------------------------------------------------  
+
+app.post('/product', (req, res, next) => {
+    console.log(req.body);
+    res.redirect('/'); // ✅✅ it will redirect to the root path '/' 👈👈👈
+});
+
+

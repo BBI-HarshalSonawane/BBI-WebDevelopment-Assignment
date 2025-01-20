@@ -1,0 +1,58 @@
+
+✅ 1. <%= %> (Output with HTML Escaping)
+
+Used to output data into the template.
+Escapes HTML by default to prevent cross-site scripting (XSS) attacks.
+
+Example:    🤯🤯🤯
+
+<%= message %>
+
+⭕ Input in the route:
+
+res.render('index', { message: "<script>alert('Hello');</script>" });
+
+⭕ Output in the browser:
+
+&lt;script&gt;alert('Hello');&lt;/script&gt;
+
+--------------------------------------------------------------------------
+
+✅ 2. <%- %> (Output without HTML Escaping)
+
+Outputs data without escaping HTML.
+Use this when you want to include raw HTML in your output.
+
+Example:    🤯🤯🤯
+
+<%- htmlMessage %>
+
+⭕ Input in the route:
+
+res.render('index', { htmlMessage: "<h1>Hello, World!</h1>" });
+
+⭕ Output in the browser:
+
+<h1>Hello, World!</h1>
+
+--------------------------------------------------------------------------
+
+✅  3. <% %> (Code Execution, No Output)
+
+Used to execute JavaScript code without directly outputting anything to the template.
+
+Example:    🤯🤯🤯
+
+<% for (let i = 0; i < items.length; i++) { %>  // ✅ for forEach or for loop we use it becz for loop we dont want to see on webpage
+  <p><%= items[i] %></p>  // ✅ and this use <%= %> becz we want to saw "items" on webpage
+<% } %>
+
+⭕ Input in the route:
+
+res.render('index', { items: ['Apple', 'Banana', 'Cherry'] });
+
+⭕ Output in the browser:
+
+<p>Apple</p>
+<p>Banana</p>
+<p>Cherry</p>

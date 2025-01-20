@@ -1,0 +1,35 @@
+Routing refers to determining how an application responds to a client request to a particular endpoint,
+ which is a URI (or path) and a specific HTTP request method (GET, POST, and so on). 👈
+
+👉 syntax 
+    app.METHOD(PATH, HANDLER)   👈
+
+
+Respond with Hello World! on the homepage:
+
+✅  app.get('/', (req, res) => {        // GET
+        res.send('Hello World!')
+    })
+Respond to POST request on the root route (/), the application’s home page:
+
+✅  app.post('/', (req, res) => {       // POST
+        res.send('Got a POST request')
+    })
+Respond to a PUT request to the /user route:
+
+✅  app.put('/user', (req, res) => {        // PUT
+        res.send('Got a PUT request at /user')
+    })
+Respond to a DELETE request to the /user route:
+
+✅  app.delete('/user', (req, res) => {     // DELETE
+        res.send('Got a DELETE request at /user')
+    })
+
+
+
+
+
+
+
+

@@ -1,0 +1,13 @@
+
+
+Here we will mentioned exact path to our 
+
+here we use '/admin' ✅
+
+👉 app.use('/admin', adminRoutes);  👉👉👉 '/admin' this one in
+in our app.js file.
+
+instead of mentioning 👉 router.get('admin/add-product', (req, res, next) => {}
+this king of full path 'admin/add-product' 👈👈 like this in our ✅ admin.js files
+
+
